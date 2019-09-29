@@ -27,6 +27,10 @@ async function main() {
 
   let _toZip = [];
 
+  if ( typeof argv.zip === 'string' ) {
+    console.log( 'hola' );
+  }
+
   profs.forEach( p => {
 
     if ( p.name === argv.name ) {
@@ -119,6 +123,7 @@ async function main() {
           exec(`zip ${_zipName} ${_toZip.join(' ')}`, ( err, stdout, stderr ) => {
             Log.info(`sending zip ...`);
             _scp = spawn( 'scp', [ _zipName, `${p.remote.host}:${p.remote.dest}` ], {stdio: 'inherit'} );
+            sh
           })
 
         }
