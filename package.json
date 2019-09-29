@@ -8,13 +8,14 @@
   },
   "author": "@lromeraj",
   "license": "ISC",
-	"bin": {
-		"bu": "./bu.js"
-	},
+  "bin": {
+    "bu": "./bu.js"
+  },
   "dependencies": {
     "@lromeraj/log": "git+https://github.com/lromeraj/node-log.git",
     "colors": "^1.4.0",
     "configstore": "^5.0.0",
+    "moment": "^2.24.0",
     "ncp": "^2.0.0",
     "walk": "^2.3.14",
     "yargs": "^14.0.0"
